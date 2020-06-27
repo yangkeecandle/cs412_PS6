@@ -1,0 +1,33 @@
+<div name="outerList">
+  <ul *ngFor="let weather of weathers">
+
+    <li (click)="showTemp(weather.city)">{{weather.city}} </li>
+
+  </ul>
+</div>
+
+<div name="details" *ngIf="selectedCity">
+  <input name="temp" type="text" value="{{selectedCity.temp}}">
+
+</div>
+
+<body>
+<div class="container">
+  <header>
+    <div class="weather-icon"><img src="/images/weather.svg"
+                                   alt=""></div>
+  </header>
+  <div class="weather-title">
+    <h1>Weather App</h1>
+    <p>Type a city name to view its current temperature</p>
+  </div>
+
+    <input type="text" name="city"
+           placeholder="Enter a city">
+    <button (click)="startTemp()">Click</button>
+  <br/>
+  Current Temp:
+
+
+</div>
+</body>
